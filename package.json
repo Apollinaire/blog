@@ -23,6 +23,7 @@
   "dependencies": {
     "@elderjs/elderjs": "^1.0.4",
     "@elderjs/plugin-browser-reload": "^0.1.6",
+    "@elderjs/plugin-images": "^0.1.18",
     "@elderjs/plugin-markdown": "^0.1.6",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
@@ -41,7 +42,8 @@
     "subfont": "^5.2.2",
     "svelte": "^3.24.0",
     "svelte-preprocess": "^4.0.9",
-    "systemjs": "^6.5.0"
+    "systemjs": "^6.5.0",
+    "vanilla-lazyload": "^17.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

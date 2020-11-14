@@ -4,3 +4,6 @@
 /build/
 .DS_Store
 
+# cache from the images plugin
+/images/sizes/
+/images/*.json
