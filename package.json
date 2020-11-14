@@ -5,6 +5,7 @@
   "main": "./src/build.js",
   "scripts": {
     "start": "npm run build:rollup && npm run dev:server",
+    "serve": "serve public",
     "dev": "npm run dev:rollup & npm run dev:server",
     "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
     "build:rollup": "rollup -c",
@@ -31,14 +32,15 @@
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "gray-matter": "^4.0.2",
+    "intersection-observer": "^0.11.0",
     "markdown-js": "^0.0.4",
     "polka": "^0.5.2",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
     "sirv": "^1.0.5",
+    "subfont": "^5.2.2",
     "svelte": "^3.24.0",
     "svelte-preprocess": "^4.0.9",
-    "intersection-observer": "^0.11.0",
     "systemjs": "^6.5.0"
   },
   "devDependencies": {
@@ -54,7 +56,8 @@
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2",
     "prettier-plugin-svelte": "^1.2.1",
-    "rollup": "^2.21.0"
+    "rollup": "^2.21.0",
+    "serve": "^11.3.2"
   },
   "author": "Nick Reese",
   "license": "MIT",

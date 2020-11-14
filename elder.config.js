@@ -25,6 +25,7 @@ module.exports = {
       // this reloads your browser when nodemon restarts your server.
       port: 8080,
     },
+    'elderjs-plugin-subfont': {},
   },
   shortcodes: { closePattern: '}}', openPattern: '{{' },
 };
