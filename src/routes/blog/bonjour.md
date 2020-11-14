@@ -1,7 +1,7 @@
 ---
 title: Bonjour
 excerpt: Ceci est un sous-titre
-coverImage: ''
+coverImage: "/images/apollinaire.png"
 date: 2020-11-13T23:00:00.000+00:00
 author: Apollinaire
 slug: bonjour
