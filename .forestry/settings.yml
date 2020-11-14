@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/routes/blog
+  path: content
   label: Voyages
   create: documents
   match: "**/*.md"
