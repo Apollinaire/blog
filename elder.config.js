@@ -1,5 +1,5 @@
 module.exports = {
-  origin: '', // TODO: update this.
+  origin: process.env.URL || '', // TODO: update this.
   srcDir: 'src',
   distDir: 'public',
   rootDir: process.cwd(),
