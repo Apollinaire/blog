@@ -9,6 +9,8 @@ sections:
   label: Voyages
   create: documents
   match: "**/*.md"
+  templates:
+  - article
 upload_dir: images
 public_path: "/images"
 front_matter_path: ''
