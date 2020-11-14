@@ -1,5 +1,5 @@
 <script>
-  export let data; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
+  export let data, helpers; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
   const { html, frontmatter } = data;
 </script>
 
@@ -52,8 +52,13 @@
 <a href="/">Home</a>
 
 <div class="title">
+  {#if frontmatter.coverImage}
+    {@html helpers.shortcode({ name: 'picture', props: { src: frontmatter.coverImage } })}
+  {/if}
   <h1>{frontmatter.title}</h1>
-  {#if frontmatter.author}<small>By {frontmatter.author}</small>{/if}
+  {#if frontmatter.author}
+    <small>By {frontmatter.author}</small>
+  {/if}
 </div>
 
 {#if html}

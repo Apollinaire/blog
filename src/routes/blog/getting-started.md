@@ -1,7 +1,6 @@
 ---
 title: 'Getting Started with Elder.js!!!'
 excerpt: 'You have the starter template of Elder.js running. So what is next? This guide will help you explore the project.'
-coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author: Nick Reese
 ---
