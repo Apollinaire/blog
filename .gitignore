@@ -1,6 +1,5 @@
 /___ELDER___/
 /node_modules/
-/public/
 /build/
 .DS_Store
 
@@ -9,3 +8,4 @@
 /images/*.json
 # Local Netlify folder
 .netlify
+/tmp

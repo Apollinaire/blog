@@ -1,7 +1,7 @@
 module.exports = {
   origin: process.env.URL || '', // TODO: update this.
   srcDir: 'src',
-  distDir: 'public',
+  distDir: process.env.NODE_ENV === 'production' ? 'public' : 'tmp',
   rootDir: process.cwd(),
   build: {},
   server: {
