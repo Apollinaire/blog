@@ -4,10 +4,10 @@
   "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs",
   "main": "./src/build.js",
   "scripts": {
-    "start": "npm run build:rollup && npm run dev:server",
+    "start": "yarn build:rollup && yarn dev:server",
     "serve": "serve public",
-    "dev": "npm run dev:rollup & npm run dev:server",
-    "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
+    "dev": "yarn dev:rollup & yarn dev:server",
+    "build": "node ./src/cleanPublic.js && yarn build:rollup && yarn build:html",
     "build:rollup": "rollup -c",
     "build:html": "node ./src/build.js",
     "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
