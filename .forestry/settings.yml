@@ -11,8 +11,8 @@ sections:
   match: "**/*.md"
   templates:
   - article
-upload_dir: images
-public_path: images
+upload_dir: public/img
+public_path: https://amelie-voyages.netlify.app/img
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
