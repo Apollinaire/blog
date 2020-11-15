@@ -7,7 +7,7 @@
     "start": "yarn build:rollup && yarn dev:server",
     "serve": "serve public",
     "dev": "yarn dev:rollup & yarn dev:server",
-    "build": "node ./src/cleanPublic.js && yarn build:rollup && yarn build:html",
+    "build": "yarn build:rollup && yarn build:html",
     "build:rollup": "rollup -c",
     "build:html": "node ./src/build.js",
     "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
