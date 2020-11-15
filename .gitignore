@@ -7,3 +7,5 @@
 # cache from the images plugin
 /images/sizes/
 /images/*.json
+# Local Netlify folder
+.netlify
