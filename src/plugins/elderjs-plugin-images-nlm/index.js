@@ -16,9 +16,9 @@ const plugin = {
   },
   config: {
     widths: [], // Sizes the images will be resized to.
-    cssString: `.ejs {display: block;position: relative;height: 0;width: 100%;}
-    .ejs img.lazy{position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;}
-    .ejs .placeholder{
+    cssString: `.ejs-img-nlm {display: block;width: 100%;}
+    .ejs-img-nlm img.lazy{width: 100%;display: block;}
+    .ejs-img-nlm .placeholder{
       position: absolute;
       top: 0;
       left: 0;
@@ -52,7 +52,7 @@ const plugin = {
   },
   shortcodes: [
     {
-      shortcode: 'picture',
+      shortcode: 'picture-nlm',
       run: ({ props, plugin, request }) => {
         const { src, ...opts } = {
           ...props,
@@ -74,19 +74,24 @@ const plugin = {
         plugin.config.widths.forEach((size, i) => {
           if (size < maxWidth) {
             let source = `<source `;
-            source += `data-srcset="${src}?w=${width}&nf_resize=fit" `;
-            if (i + 1 < plugin.config.widths) {
-              source += `media="(min-width: ${size}px)" `;
+            source += `data-srcset="${src}?w=${size}&nf_resize=fit" `;
+            // offset: we must render an image with a resolution at least equal to the <img> width
+            // so the min-width is the breakpoint coming right after
+            // plugin.config.widths is sorted (descending) at init
+            if (i + 1 < plugin.config.widths.length) {
+              source += `media="(min-width: ${plugin.config.widths[i + 1]}px)" `;
             }
             source += `/>`;
             picture += source;
           }
         });
 
-        picture += `<img src="${src}" ${alt.length > 0 ? ` alt="${alt}"` : ''} class="lazy blur-up">`;
+        picture += `<img data-src="${src}" ${alt.length > 0 ? ` alt="${alt}"` : ''} class="lazy blur-up">`;
         picture += `</picture>`;
 
-        return picture;
+        let pictureWithWrap = `<div class="ejs-img-nlm">${picture}</div>`;
+
+        return pictureWithWrap;
       },
     },
   ],
@@ -146,7 +151,7 @@ const plugin = {
           vanillaLazyLoad.onload = function() {
             var ll = new LazyLoad({
               callback_loaded: function (element) {
-                var ejs = findAncestor(element, 'ejs');
+                var ejs = findAncestor(element, 'ejs-img-nlm');
                 if(ejs){
                   var elements = ejs.getElementsByClassName("placeholder");
                   if(elements.length > 0){

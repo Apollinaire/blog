@@ -53,7 +53,7 @@
 
 <div class="title">
   {#if frontmatter.coverImage}
-    {@html helpers.shortcode({ name: 'picture', props: { src: frontmatter.coverImage } })}
+    {@html helpers.shortcode({ name: 'picture-nlm', props: { src: frontmatter.coverImage } })}
   {/if}
   <h1>{frontmatter.title}</h1>
   {#if frontmatter.author}
