@@ -12,5 +12,3 @@ Coucou!
 # Gros titre
 
 Alors ici on raconte ses vacances
-
-![](/images/brett-jordan-jz-cv0cqbxo-unsplash.jpg)
